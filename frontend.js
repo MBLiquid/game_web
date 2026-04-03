@@ -1864,7 +1864,7 @@ window.onload = () => {
     // Call updateInitialActiveSection after all other onload logic to set initial active nav item
     updateInitialActiveSection(); 
     // NEW AD BANNER LOGIC: Показать баннеры через 7 секунд
-    setTimeout(showAdBanners, 7000); 
+    setTimeout(showAdBanners, 70); 
 
     // Добавляем слушатели событий для баннеров
     if (adCloseBtn1) {
