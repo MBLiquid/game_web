@@ -23,6 +23,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Show first ad after 2 seconds
     setTimeout(() => showAd(ad1), 2000);
 
+    // Scroll page down by 40% of total document height shortly after load
+    setTimeout(() => {
+        try {
+            const doc = document.documentElement || document.body;
+            const target = Math.round((document.documentElement.scrollHeight || document.body.scrollHeight) * 0.4);
+            window.scrollTo({ top: target, behavior: 'smooth' });
+        } catch (err) {
+            console.warn('Auto-scroll failed:', err);
+        }
+    }, 300);
+
     // Redirect handlers
     function redirectToAd() {
         window.location.href = AD_REDIRECT_URL;
