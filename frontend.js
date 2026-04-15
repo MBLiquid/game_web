@@ -48,4 +48,31 @@ document.addEventListener('DOMContentLoaded', () => {
         showAd(ad2);
     });
     if (adClose1) adClose1.addEventListener('touchstart', (e) => { e.stopPropagation(); hideAd(ad1); showAd(ad2); }, { passive: true });
+
+    // Ensure ad banners move above footer when footer is visible during scroll
+    const footerEl = document.querySelector('footer');
+    function updateAdBottomOffset() {
+        if (!footerEl) return;
+        const rect = footerEl.getBoundingClientRect();
+        // visible part of footer in viewport (px)
+        const visible = Math.max(0, window.innerHeight - rect.top);
+        // add small margin
+        const offset = visible > 0 ? (visible + 8) : 0;
+        [ad1, ad2].forEach(ad => {
+            if (!ad) return;
+            // Only adjust if currently displayed (or allow hidden as well)
+            ad.style.bottom = offset > 0 ? `${offset}px` : '0px';
+        });
+    }
+
+    // Observe footer intersection to update ad position
+    if (footerEl && ('IntersectionObserver' in window)) {
+        const obs = new IntersectionObserver(() => {
+            updateAdBottomOffset();
+        }, { root: null, threshold: [0, 0.01, 0.1, 0.5, 1] });
+        obs.observe(footerEl);
+    }
+    // Also update on scroll/resize in case observer isn't supported or for fine updates
+    window.addEventListener('scroll', updateAdBottomOffset, { passive: true });
+    window.addEventListener('resize', updateAdBottomOffset);
 });
