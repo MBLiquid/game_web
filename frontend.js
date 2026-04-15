@@ -159,17 +159,17 @@
 
 		<div class="game-wrapper">
 			<div class="game-container">
-           <iframe src="https://html5.gamedistribution.com/fc1c68fa04af4e0785a0fd3a12a08783/?gd_sdk_referrer_url=https://zoneunfolded.onrender.com" width="750" height="1334" scrolling="no" frameborder="0"></iframe>
+           <iframe src="https://html5.gamedistribution.com/fc1c68fa04af4e0785a0fd3a12a08783/?gd_sdk_referrer_url=https://zoneunfolded.onrender.com" width="750" height="1334" scrolling="none" frameborder="0"></iframe>
 			</div>
 		</div>
 		<div class="game-wrapper">
 			<div class="game-container">
-         <iframe src="https://html5.gamedistribution.com/22c23c982349439294e9a3d0d55b7a76/?gd_sdk_referrer_url=https://oneunfolded.onrender.com" width="900" height="600" scrolling="no" frameborder="0"></iframe>
+         <iframe src="https://html5.gamedistribution.com/22c23c982349439294e9a3d0d55b7a76/?gd_sdk_referrer_url=https://oneunfolded.onrender.com" width="900" height="600" scrolling="none" frameborder="0"></iframe>
 			</div>
 		</div>
 		<div class="game-wrapper">
 			<div class="game-container">
-            <iframe src="https://html5.gamedistribution.com/0ea7b7e7316a47c38ac5c98ddd42ec4a/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" width="800" height="600" scrolling="no" frameborder="0"></iframe>
+            <iframe src="https://html5.gamedistribution.com/0ea7b7e7316a47c38ac5c98ddd42ec4a/?gd_sdk_referrer_url=https://www.example.com/games/{game-path}" width="800" height="600" scrolling="none" frameborder="0"></iframe>
 			</div>
 		</div>
        <br />
